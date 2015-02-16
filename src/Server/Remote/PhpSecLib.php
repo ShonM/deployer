@@ -77,6 +77,7 @@ class PhpSecLib implements ServerInterface
                 
                 $key = new Agent();
                 $result = $this->sftp->login($serverConfig->getUser(), $key);
+                $this->sftp->agent->startSSHForwarding(true);
                 
                 break;
             
